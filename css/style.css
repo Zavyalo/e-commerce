@@ -173,7 +173,7 @@ main {
     border: 1px solid var(--color-black);
     border-radius: 4px;
     color: var(--color-black);
-    transition: background 0.3s ease-in;
+    transition: 0.3s ease-in;
     font-size: var(--font-sise-subtitle2);
     font-family: "Montserrat", serif;
 }
@@ -247,4 +247,46 @@ main {
     color: var(--color-blue-gray);
     font-size: var(--font-sise-body2);
     margin-bottom: 10px;
+}
+
+/*-------------Пагинация---------------*/
+
+.pagination {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 30px;
+    flex-grow: 1;
+}
+.pagination__namder {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--color-purple);
+    color: var(--color-white);
+    text-decoration: none;
+    border-radius: 40px;
+    width: 30px;
+    height: 30px;
+    margin: 10px;
+    transition: 0.3s ease-in;
+}
+.pagination__namder:hover,
+.pagination__namder:focus,
+.pagination__namder:active {
+    background-color: var(--color-pink);
+}
+.pagination__active {
+    background-color: var(--color-pink);
+}
+.pagination__href {
+    color: var(--color-blue-gray);
+    margin: 10px;
+    transition: 0.3s ease-in;
+}
+.pagination__href:hover,
+.pagination__href:focus,
+.pagination__href:active {
+    color: var(--color-pink);
 }
