@@ -1,6 +1,6 @@
 :root {
     --color-white: white;
-    --color-off-white:rgb(252, 252, 255);
+    --color-off-white:rgb(249, 249, 250);
     --color-gray: rgb(223, 225, 227);
     --color-blue-gray: rgb(105, 117, 134);
     --color-black: rgb(56, 56, 56);
@@ -33,16 +33,23 @@ body {
 
 body {
     background-color: var(--color-off-white);
-    display: flex;
-    flex-direction: column;
 }
 footer {
     background-color: var(--color-black);
     min-height: 100px;
 }
 header {
-    background-color: var(--color-off-white);
-    min-height: 100px;
+    background-color: var(--color-white);
+    min-height: 60px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 40px;
+}
+header a {
+    text-decoration: none;
+    color: var(--color-black);
 }
 main {
     flex-grow: 1;
@@ -74,11 +81,6 @@ main {
     display: flex;
     flex-direction: row;
     gap:20px;
-}
-.catalog__filter {
-    width: 290px;
-    background-color:var(--color-white);
-    flex-shrink: 0;
 }
 .catalog__sort {
     background-color: var(--color-off-white);
@@ -289,4 +291,136 @@ main {
 .pagination__href:focus,
 .pagination__href:active {
     color: var(--color-pink);
+}
+
+/*----------сортировка-----------*/
+
+.catalog__sort {
+    display: flex;
+    align-items: center;
+    max-width: 320px;
+    margin-left: 20px;
+}
+.catalog__sort p {
+    font-size: var(--font-sise-body1);
+    color: var(--color-blue-gray);
+    margin-right: 20px;
+    white-space: nowrap;
+}
+.catalog__sort button{
+    background-color: var(--color-white);
+    width: 100%;
+    padding: 5px;
+    border: 1px solid var(--color-blue-gray);
+    border-radius: 4px;
+    color: var(--color-black);
+    font-size: var(--font-sise-body2);
+    font-family: "Montserrat", serif;
+    transition: 0.3s ease-in;
+}
+
+/*----------фильтрация-----------*/
+
+.catalog__filter {
+    width: 290px;
+    background-color:var(--color-white);
+    flex-shrink: 0;
+    padding: 20px;
+    border-radius: 6px;
+}
+.filter-color {
+    display: flex;
+    gap: 15px;
+    padding-top: 20px;
+}
+.filter-color__item {
+    flex-shrink: 0;
+}
+.filter-color__checkbox {
+    display: none;
+}
+.filter-color__label {
+    display: inline-block;
+    position: relative;
+    width: 30px;
+    height: 30px;
+    border-radius: 30px;
+    outline: var(--color-gray) 0px solid;
+    outline-offset: 0px;
+    transition: outline 0.2s, outline-offset 0.2s;
+}
+.filter-color__label:focus,
+.filter-color__label:hover {
+    outline: var(--color-gray) 2px solid;
+    outline-offset: 3px;
+    cursor: pointer;
+}
+.filter-color__label:active {
+    outline: var(--color-blue-gray);
+}
+.filter-color__checkbox:checked+.filter-color__label {
+    outline: var(--color-gray) 2px solid;
+    outline-offset: 3px;
+}
+.filter-color__label::after {
+    content: "";
+    transition: transform 0.2s;
+}
+.filter-color__checkbox:checked+.filter-color__label::after {
+    content: "\F272";
+    font-family: "bootstrap-icons";
+    color: var(--color-gray);
+    transform: scale(1);
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.filter-brand__item {
+    margin-top: 10px;
+    font-size: var(--font-sise-body2);
+    color: var(--color-blue-gray);
+}
+.filter-type__item {
+    margin-top: 10px;
+    font-size: var(--font-sise-body2);
+    color: var(--color-blue-gray);
+}
+.filter-skin__item {
+    margin-top: 10px;
+    font-size: var(--font-sise-body2);
+    color: var(--color-blue-gray);
+}
+.filter__subtitle {
+    margin-top: 15px;
+    font-size: var(--font-sise-subtitle1);
+    color: var(--color-black);
+}
+input[type="checkbox"],
+input[type="radio"] {
+    appearance: none;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    border: var(--color-blue-gray);
+    transition: transform 0.2s, 
+    background-color 0.2s,
+    outline 0.2 s,
+    outline-offset 0.2s;
+}
+input[type="radio"]:checked {
+    transform: scale(0.6);
+    background-color: var(--color-pink);
+    outline: var(--color-gray) 1px solid;
+    outline-offset: 6px;
+}
+input[type="radio"]:disabled {
+    border: solid 1px var(--color-gray);
+}
+input[type="radio"]:disabled :checked {
+    transform: scale(2);
+    background-color: var(--color-purple);
+    outline: var(--color-purple);
+    outline-offset: 6px;
 }

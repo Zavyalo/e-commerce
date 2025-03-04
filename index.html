@@ -14,14 +14,101 @@
 </head>
 <body>
     <header>
-        
+        <a href="#">Каталог</a>
+        <a href="#">Скидки</a>
+        <a href="#">Коллекция</a>
+        <a href="#">О нас</a>
+        <a href="#">Блог</a>
     </header>
     <main>
         <section>
             <div class="container catalog">
-                <div class="catalog__filter"></div>
+                <div class="catalog__filter">
+                    <h4>ФИЛЬТРЫ</h4>
+                    <div class="filter__subtitle">Категория товара</div>
+                        <div class="filter-type">
+                            <div class="filter-type__item">
+                                <input type="checkbox" name="type-cream" id="type-cream" class="filter-type__checkbox">
+                                <label for="type-cream" class="filter-type__label" id="type-cream-label" aria-label="cream" role="checkbox" aria-checked="false">Крем</label>
+                            </div>
+                            <div class="filter-type__item">
+                                <input type="checkbox" name="type-" id="type-mask" class="filter-type__checkbox">
+                                <label for="type-mask" class="filter-type__label" id="type-mask-label" aria-label="mask" role="checkbox" aria-checked="false">Маска</label>
+                            </div>
+                            <div class="filter-type__item">
+                                <input type="checkbox" name="type-cosmetic" id="type-cosmetic" class="filter-type__checkbox">
+                                <label for="type-cosmetic" class="filter-type__label" id="type-cosmetic-label" aria-label="cosmetic" role="checkbox" aria-checked="false">Декоративная косметика</label>
+                            </div>
+                            <div class="filter-type__item">
+                                <input type="checkbox" name="type-serum" id="type-serum" class="filter-type__checkbox">
+                                <label for="type-serum" class="filter-type__label" id="type-serum-label" aria-label="serum" role="checkbox" aria-checked="false">Сыворотка</label>
+                            </div>
+                        </div>
+                    <div class="filter__subtitle">Цвет</div>
+                    <div class="filter-color">
+                        <div class="filter-color__item">
+                            <input type="checkbox" name="color-red" id="color-red" class="filter-color__checkbox">
+                            <label for="color-red" class="filter-color__label" aria-label="красный цвет" style="background-color: red;"></label>
+                        </div>
+                        <div class="filter-color__item">
+                            <input type="checkbox" name="color-green" id="color-green" class="filter-color__checkbox">
+                            <label for="color-green" class="filter-color__label" aria-label="зеленый цвет" style="background-color: green;"></label>
+                        </div>
+                        <div class="filter-color__item">
+                            <input type="checkbox" name="color-blue" id="color-blue" class="filter-color__checkbox">
+                            <label for="color-blue" class="filter-color__label" aria-label="синий цвет" style="background-color: blue;"></label>
+                        </div>
+                        <div class="filter-color__item">
+                            <input type="checkbox" name="color-yellow" id="color-yellow" class="filter-color__checkbox">
+                            <label for="color-yellow" class="filter-color__label" aria-label="желтый цвет" style="background-color: yellow;"></label>
+                        </div>
+                    </div>
+                    <div class="filter-section">
+                        <div class="filter__subtitle">Тип кожи</div>
+                        <div class="filter-skin">
+                            <div class="filter-skin__item">
+                                <input type="radio" name="skin" id="skin-dry" class="filter-skin__radio">
+                                <label for="skin-dry" class="filter-skin__label" id="skin-dry-label" aria-label="сухая кожа" role="radio" aria-checked="false">Сухая кожа</label>
+                            </div>
+                            <div class="filter-skin__item">
+                                <input type="radio" name="skin" id="skin-oily" class="filter-skin__radio">
+                                <label for="skin-oily" class="filter-skin__label" id="skin-oily-label" aria-label="комбинированная кожа" role="radio" aria-checked="false">Комбинированная/жирная кожа</label>
+                            </div>
+                            <div class="filter-skin__item">
+                                <input type="radio" name="skin" id="skin-normal" class="filter-skin__radio">
+                                <label for="skin-normal" class="filter-skin__label" id="skin-normal-label" aria-label="нормальная кожа" role="radio" aria-checked="false">Нормальная кожа</label>
+                            </div>
+                            <div class="filter-skin__item">
+                                <input type="radio" name="skin" id="skin-sensitive" class="filter-skin__radio">
+                                <label for="skin-sensitive" class="filter-skin__label" id="skin-sensitive-label" aria-label="чувствительная кожа" role="radio" aria-checked="false">Чувствительная кожа</label>
+                            </div>
+                        </div>
+                        <div class="filter__subtitle">Бренд</div>
+                        <div class="filter-brand">
+                            <div class="filter-brand__item">
+                                <input type="checkbox" name="brand-maxfactor" id="brand-maxfactor" class="filter-brand__checkbox">
+                                <label for="brand-maxfactor" class="filter-brand__label" id="brand-maxfactor-label" aria-label="maxfactor" role="checkbox" aria-checked="false">Max Factor</label>
+                            </div>
+                            <div class="filter-brand__item">
+                                <input type="checkbox" name="brand-dior" id="brand-dior" class="filter-brand__checkbox">
+                                <label for="brand-dior" class="filter-brand__label" id="brand-dior-label" aria-label="dior" role="checkbox" aria-checked="false">Dior</label>
+                            </div>
+                            <div class="filter-brand__item">
+                                <input type="checkbox" name="brand-avon" id="brand-avon" class="filter-brand__checkbox">
+                                <label for="brand-avon" class="filter-brand__label" id="brand-avon-label" aria-label="avon" role="checkbox" aria-checked="false">Avon</label>
+                            </div>
+                            <div class="filter-brand__item">
+                                <input type="checkbox" name="brand-anny" id="brand-anny" class="filter-brand__checkbox">
+                                <label for="brand-anny" class="filter-brand__label" id="brand-anny-label" aria-label="anny" role="checkbox" aria-checked="false">Anny</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
                     <div class="catalog__content">
-                        <div class="catalog__sort"></div>
+                        <div class="catalog__sort">
+                            <p>Сортировать по</p>
+                            <button>По пулярности <i class="bi bi-caret-down"></i></button>
+                        </div>
                         <div class="catalog__grid">
                             <div class="catalog__card">
                                 <div class="img__wrapper">
