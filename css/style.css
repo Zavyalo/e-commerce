@@ -295,28 +295,34 @@ main {
 
 /*----------сортировка-----------*/
 
-.catalog__sort {
+.filter__section {
     display: flex;
     align-items: center;
-    max-width: 320px;
+    max-width: 370px;
     margin-left: 20px;
 }
-.catalog__sort p {
+.filter__section p {
     font-size: var(--font-sise-body1);
     color: var(--color-blue-gray);
     margin-right: 20px;
     white-space: nowrap;
 }
-.catalog__sort button{
-    background-color: var(--color-white);
+.filter-sort {
     width: 100%;
-    padding: 5px;
-    border: 1px solid var(--color-blue-gray);
-    border-radius: 4px;
-    color: var(--color-black);
+    padding: 10px;
+    border-radius: 6px;
+    text-overflow: '';
+    background-color: var(--color-white);
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    -ms-appearance: none;
     font-size: var(--font-sise-body2);
     font-family: "Montserrat", serif;
-    transition: 0.3s ease-in;
+    content: "\F229";
+}
+.filter-sort::-ms-expand {
+    display: none;
 }
 
 /*----------фильтрация-----------*/
@@ -378,16 +384,22 @@ main {
     justify-content: center;
 }
 .filter-brand__item {
+    display: flex;
+    align-items: center;
     margin-top: 10px;
     font-size: var(--font-sise-body2);
     color: var(--color-blue-gray);
 }
 .filter-type__item {
+    display: flex;
+    align-items: center;
     margin-top: 10px;
     font-size: var(--font-sise-body2);
     color: var(--color-blue-gray);
 }
 .filter-skin__item {
+    display: flex;
+    align-items: center;
     margin-top: 10px;
     font-size: var(--font-sise-body2);
     color: var(--color-blue-gray);
@@ -397,30 +409,96 @@ main {
     font-size: var(--font-sise-subtitle1);
     color: var(--color-black);
 }
-input[type="checkbox"],
 input[type="radio"] {
+    margin-right: 1em;
     appearance: none;
     border-radius: 50%;
     width: 20px;
     height: 20px;
-    border: var(--color-blue-gray);
-    transition: transform 0.2s, 
-    background-color 0.2s,
-    outline 0.2 s,
-    outline-offset 0.2s;
+    border: var(--color-blue-gray) solid 1px;
+    transition: all;
 }
 input[type="radio"]:checked {
     transform: scale(0.6);
     background-color: var(--color-pink);
-    outline: var(--color-gray) 1px solid;
+    outline: var(--color-blue-gray) 1px solid;
     outline-offset: 6px;
-}
-input[type="radio"]:disabled {
-    border: solid 1px var(--color-gray);
 }
 input[type="radio"]:disabled :checked {
     transform: scale(2);
-    background-color: var(--color-purple);
-    outline: var(--color-purple);
     outline-offset: 6px;
+}
+input[type="checkbox"] {
+    margin-right: 1em;
+    appearance: none;
+    border-radius: 15%;
+    width: 20px;
+    height: 20px;
+    border: var(--color-blue-gray) solid 1px;
+    transition: all;
+}
+input[type="checkbox"]:checked {
+    transform: scale(0.6);
+    background-color: var(--color-pink);
+    outline: var(--color-blue-gray) 1px solid;
+    outline-offset: 6px;
+}
+input[type="checkbox"]:disabled :checked {
+    transform: scale(2);
+    outline-offset: 6px;
+}
+.filter__btn {
+    position: relative;
+    background-color: var(--color-white);
+    width: 100%;
+    padding: 10px;
+    border: 1px solid var(--color-black);
+    border-radius: 4px;
+    color: var(--color-black);
+    transition: 0.3s ease-in;
+    font-size: var(--font-sise-subtitle2);
+    font-family: "Montserrat", serif;
+    margin-top: 20px;
+}
+.filter__btn:hover,
+.filter__btn:focus,
+.filter__btn:active {
+    background-color: var(--color-black);
+    color: var(--color-white);
+}
+
+
+/*---------КАРТОЧКА ТОВАРА-----------*/
+
+.product {
+    display: flex;
+    flex-direction: row;
+    gap: 120px;
+    margin-bottom: 40px;
+}
+.product-img {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.product-img-big {
+    width: 495px;
+    height: 495px;
+    background-color: var(--color-gray);
+}
+.product-img-small {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+.img-small {
+    width: 83px;
+    height: 83px;
+    background-color: var(--color-gray);
+}
+.img-small--active {
+    width: 83px;
+    height: 83px;
+    background-color: var(--color-gray);
+    border: 1px solid var(--color-purple);
 }
