@@ -476,6 +476,23 @@ input[type="checkbox"]:disabled :checked {
     gap: 120px;
     margin-bottom: 40px;
 }
+.product__title {
+    font-size: var(--font-sise-h3);
+    color: var(--color-black);
+}
+.product__raiting {
+    margin-top: 20px;
+}
+.product__price {
+    margin-top: 20px;
+    font-size: var(--font-sise-body1);
+    color: var(--color-black);
+}
+.product__description {
+    margin-top: 20px;
+    font-size: var(--font-sise-body2);
+    color: var(--color-blue-gray);
+}
 .product-img {
     display: flex;
     flex-direction: column;
@@ -484,7 +501,6 @@ input[type="checkbox"]:disabled :checked {
 .product-img-big {
     width: 495px;
     height: 495px;
-    background-color: var(--color-gray);
 }
 .product-img-small {
     display: flex;
@@ -502,3 +518,29 @@ input[type="checkbox"]:disabled :checked {
     background-color: var(--color-gray);
     border: 1px solid var(--color-purple);
 }
+.product__click {
+    display: flex;
+    flex-direction: row;
+    row-gap: ;
+    margin-top: 20px;
+}
+.product__btn {
+    position: relative;
+    width: 100%;
+    padding: 10px;
+    border-radius: 4px;
+    background-color: var(--color-pink);
+    transition: 0.3s ease-in;
+    font-size: var(--font-sise-subtitle2);
+    font-family: "Montserrat", serif;
+    border: none;
+    color: var(--color-white);
+    max-width: 226px;
+}
+.product__btn:hover,
+.product__btn:focus,
+.product__btn:active {
+    background-color: var(--color-black);
+    color: var(--color-white);
+}
+
