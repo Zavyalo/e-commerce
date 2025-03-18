@@ -485,13 +485,16 @@ input[type="checkbox"]:disabled :checked {
 }
 .product__price {
     margin-top: 20px;
-    font-size: var(--font-sise-body1);
+    font-size: var(--font-sise-subtitle2);
     color: var(--color-black);
 }
 .product__description {
     margin-top: 20px;
     font-size: var(--font-sise-body2);
     color: var(--color-blue-gray);
+}
+.product__description p {
+    margin-top: 10px;
 }
 .product-img {
     display: flex;
@@ -521,8 +524,23 @@ input[type="checkbox"]:disabled :checked {
 .product__click {
     display: flex;
     flex-direction: row;
-    row-gap: ;
+    row-gap: 20px;
     margin-top: 20px;
+}
+.product__rec-title {
+    font-size: var(--font-sise-body2);
+    color: var(--color-black);
+    margin-top: 20px;
+}
+.product__rec {
+    display: flex;
+    flex-direction: row;
+    row-gap: 10px;
+}
+.product__rec-section {
+    margin-top: 10px;
+    color: var(--color-blue-gray);
+    font-size: var(--font-sise-body2);
 }
 .product__btn {
     position: relative;
@@ -540,6 +558,40 @@ input[type="checkbox"]:disabled :checked {
 .product__btn:hover,
 .product__btn:focus,
 .product__btn:active {
+    background-color: var(--color-black);
+    color: var(--color-white);
+}
+.reviews__title {
+    display: flex;
+    flex-direction: column;
+    column-gap: 20px;
+    align-items: center;
+}
+.reviews__h3 {
+    font-size: var(--font-sise-h3);
+    color: var(--color-black);
+}
+.product__ingredients {
+    font-size: var(--font-sise-body2);
+    color: var(--color-black);
+    margin-top: 20px;
+}
+.reviews__btn {
+    position: relative;
+    background-color: var(--color-white);
+    width: 200px;
+    padding: 10px;
+    border: 1px solid var(--color-black);
+    border-radius: 4px;
+    color: var(--color-black);
+    transition: 0.3s ease-in;
+    font-size: var(--font-sise-subtitle2);
+    font-family: "Montserrat", serif;
+    margin-top: 20px;
+}
+.reviews__btn:hover,
+.reviews__btn:focus,
+.reviews__btn:active {
     background-color: var(--color-black);
     color: var(--color-white);
 }
