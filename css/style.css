@@ -467,7 +467,6 @@ input[type="checkbox"]:disabled :checked {
     color: var(--color-white);
 }
 
-
 /*---------КАРТОЧКА ТОВАРА-----------*/
 
 .product {
@@ -576,6 +575,11 @@ input[type="checkbox"]:disabled :checked {
     color: var(--color-black);
     margin-top: 20px;
 }
+.product__ingredients p {
+    font-size: var(--font-sise-body2);
+    color: var(--color-blue-gray);
+    margin-top: 10px;
+}
 .reviews__btn {
     position: relative;
     background-color: var(--color-white);
@@ -596,3 +600,61 @@ input[type="checkbox"]:disabled :checked {
     color: var(--color-white);
 }
 
+/*---------ОФОРМЛЕНИЕ ЗАКАЗА-----------*/
+
+.ordering {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+.information {
+    width: 800px;
+    background-color: var(--color-white);
+    padding: 30px;
+}
+.order {
+    width: 400px;
+    background-color: var(--color-white);
+    padding: 30px;
+}
+.information p {
+    text-decoration: none;
+    font-size: var(--font-sise-subtitle1);
+    color: var(--color-black);
+    margin-bottom: 20px;
+}
+.ordering__btn {
+    position: relative;
+    width: 100%;
+    padding: 10px;
+    border-radius: 4px;
+    background-color: var(--color-pink);
+    transition: 0.3s ease-in;
+    font-size: var(--font-sise-subtitle2);
+    font-family: "Montserrat", serif;
+    border: none;
+    color: var(--color-white);
+    max-width: 300px;
+    margin-top: 20px;
+}
+.ordering__btn:hover,
+.ordering__btn:focus,
+.ordering__btn:active {
+    background-color: var(--color-black);
+    color: var(--color-white);
+}
+.order p {
+    text-decoration: none;
+    font-size: var(--font-sise-subtitle1);
+    color: var(--color-black);
+    margin-bottom: 20px;
+}
+.order__card {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+.order img {
+    width: 100px;
+    height: 100px;
+}

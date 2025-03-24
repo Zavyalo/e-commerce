@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Каталог товаров</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="index.html">
+    <link rel="stylesheet" href="card.html">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <a href="#">На главную</a>
+    </header>
+    <main>
+        <section>
+            <div class="ordering">
+                <div class="information">
+                    <p>Информация о покупателе</p>
+                    <p>Адрес доставки</p>
+                    <p>Способ оплаты</p>
+                    <div class="payment">
+                        <div class="filter-skin">
+                            <div class="filter-skin__item">
+                                <input type="radio" name="skin" id="skin-dry" class="filter-skin__radio">
+                                <label for="skin-dry" class="filter-skin__label" id="skin-dry-label"
+                                    aria-label="сухая кожа" role="radio" aria-checked="false">Банковской картой</label>
+                            </div>
+                            <div class="filter-skin__item">
+                                <input type="radio" name="skin" id="skin-oily" class="filter-skin__radio">
+                                <label for="skin-oily" class="filter-skin__label" id="skin-oily-label"
+                                    aria-label="комбинированная кожа" role="radio" aria-checked="false">СБП</label>
+                            </div>
+                        </div>
+                        <button class="ordering__btn">Оформить заказ</button>
+                    </div>
+                </div>
+                <div class="order">
+                    <p>Ваш заказ</p>
+                    <div class="order__card">
+                        <div class="order__card-img">
+                            <img src="img/img__catalog2.jpg" alt="">
+                            <div class="order__card-name">Увлажняющий крем Dewy Glow</div>
+                            <div class="order__card-price">1200 &#8381;</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+
+    </footer>
+</body>
+
+</html>
