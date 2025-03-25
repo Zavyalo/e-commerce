@@ -19,14 +19,42 @@
 
 <body>
     <header>
-        <a href="#">На главную</a>
+        <a href="card.html">Назад</a>
     </header>
     <main>
         <section>
             <div class="ordering">
                 <div class="information">
                     <p>Информация о покупателе</p>
+                    <form action="">
+                        <div class="form-email">
+                            <div><label for="email" class="form-lable">Введите эл. почту</label></div>
+                            <div><input type="email" id="email" class="form-field"></div>
+                        </div>
+                        <div class="form-phone">
+                            <div><label for="phone" class="form-lable">Введите телефон</label></div>
+                            <div><input type="tel" id="phone" class="form-field"></div>
+                        </div>
+                        <div class="form-name">
+                            <div><label for="name" class="form-lable">Введите имя</label></div>
+                            <div><input type="text" id="name" class="form-field"></div>
+                        </div>
+                        <div class="form-lastname">
+                            <div><label for="lastname" class="form-lable">Введите фамилию</label></div>
+                            <div><input type="text" id="lastname" class="form-field"></div>
+                        </div>
+                    </form>
                     <p>Адрес доставки</p>
+                    <form action="">
+                        <div class="form-adress">
+                            <div><label for="adress" class="form-lable">Введите адрес доставки</label></div>
+                            <div><input type="text" id="adress" class="form-field"></div>
+                        </div>
+                        <div class="form-comment">
+                            <div><label for="lastname" class="form-lable">Введите комментарй к заказу</label></div>
+                            <div><textarea name="comment" id="comment" class="form-field"></textarea></div>
+                        </div>
+                    </form>
                     <p>Способ оплаты</p>
                     <div class="payment">
                         <div class="filter-skin">
@@ -47,10 +75,11 @@
                 <div class="order">
                     <p>Ваш заказ</p>
                     <div class="order__card">
-                        <div class="order__card-img">
-                            <img src="img/img__catalog2.jpg" alt="">
+                        <img src="img/img__catalog2.jpg" alt="">
+                        <div class="order__card-text">
                             <div class="order__card-name">Увлажняющий крем Dewy Glow</div>
                             <div class="order__card-price">1200 &#8381;</div>
+                            <div class="order__card-quantity"><p>-</p><p>1</p><p>+</p></div>
                         </div>
                     </div>
                 </div>
