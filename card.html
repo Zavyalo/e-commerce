@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="index.html">
     <link rel="stylesheet" href="ordering.html">
+    <script src="js.js"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
@@ -19,11 +20,20 @@
 
 <body>
     <header>
-        <a href="#">Каталог</a>
-        <a href="#">Скидки</a>
-        <a href="#">Коллекция</a>
-        <a href="#">О нас</a>
-        <a href="#">Блог</a>
+        <nav>
+            <a class="main-menu__link" href="#"><img src="img/logo.png" alt=""></a>
+            <ul class="main-menu">
+                <li><a class="main-menu__link--active" href="index.html">Каталог</a></li>
+                <li><a class="main-menu__link" href="#">Акции</a></li>
+                <li><a class="main-menu__link" href="#">О нас</a></li>
+                <li><a class="main-menu__link" href="#">Блог</a></li>
+            </ul>
+            <ul class="menu">
+                <li><a class="menu__link" href="#"><i class="bi bi-search"></i>Поиск</a></i></li>
+                <li><a class="menu__link" href="card.html"><i class="bi bi-bag"></i>Корзина</a></i></li>
+                <li><a class="menu__link" href="#"><i class="bi bi-person"></i>Аккаунт</a></li>
+            </ul>
+        </nav>
     </header>
     <main>
         <section>
@@ -40,17 +50,18 @@
                 </div>
                 <div class="product-about">
                     <div class="product__title">Увлажняющий крем Dewy Glow</div>
-                    <div class="product__raiting"><i class="bi bi-star-fill"></i><i
-                        class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
-                        class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>3 отзыва</div>
+                        <div class="catalog__feedback">
+                            <div class="catalog__raiting"><i class="bi bi-star-fill i-active"></i><i
+                                    class="bi bi-star-fill i-active"></i><i class="bi bi-star-fill i-active"></i><i
+                                    class="bi bi-star-fill i-active"></i><i class="bi bi-star-fill i-noactive"></i>(3)</div>
+                        </div>
                     <div class="product__price">1200 &#8381;</div>
                     <div class="product__description">Увлажняющий гель, наполненный экстрактами цветков вишни, усиливающими сияние, заметно осветляющим ниацинамидом и увлажняющим бетаином из сахарной свеклы. Улучшенный с глицерином и флаваноидами цветков вишни с видимыми успокаивающими и увлажняющими свойствами для кожи, готовой к макияжу! Протестировано дерматологами.<p>Объем: 200 мл.</p></div>
                         <div class="product__rec-title">РЕКОМЕНДУЕТСЯ ДЛЯ</div>
                         <div class="product__rec">
-                            <div class="product__rec-section">Сухой кожи</div>
-                            <div class="product__rec-section">Комбинированной кожи</div>
+                            <div class="product__rec-section"><i class="bi bi-droplet"></i>Сухой кожи</div>
+                            <div class="product__rec-section"><i class="bi bi-droplet-half"></i>Комбинированной кожи</div>
                         </div>
-                    <div class="product__ingredients">СОСТАВ ПРОДУКТА <p>Aqua (Water), Caprylic/Capric Triglyceride, Cetearyl Olivate, Sorbitan Olivate, Coco-Caprylate/Caprate, Glyceryl Stearate, Ethylhexyl Stearate, Simmondsia Chinensis (Jojoba) Seed Oil, Ascorbyl Tetraisopalmitate, Glycerin</p></div>
                     <div class="product__click"><button class="product__btn">В корзину</button></div>
                     <a href="ordering.html">Оформить заказ</a>
                 </div>
@@ -58,9 +69,11 @@
             <div class="reviews">
                 <div class="reviews__title">
                     <div class="reviews__h3">Отзывы о товаре</div>
-                    <div class="product__raiting"><i class="bi bi-star-fill"></i><i
-                        class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
-                        class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>3 отзыва</div>
+                    <div class="catalog__feedback">
+                        <div class="catalog__raiting"><i class="bi bi-star-fill i-active"></i><i
+                                class="bi bi-star-fill i-active"></i><i class="bi bi-star-fill i-active"></i><i
+                                class="bi bi-star-fill i-active"></i><i class="bi bi-star-fill i-noactive"></i>(3)</div>
+                    </div>
                         <button class="reviews__btn">Написать отзыв</button>
                 </div>
                 <div class="revievs__card">
@@ -68,6 +81,11 @@
                         <div class="revievs__card-avatar"></div>
                         <div class="revievs__card-section">
                             <div class="revievs__card-name">Алина</div>
+                            <div class="catalog__feedback">
+                                <div class="catalog__raiting"><i class="bi bi-star-fill i-active"></i><i
+                                        class="bi bi-star-fill i-active"></i><i class="bi bi-star-fill i-active"></i><i
+                                        class="bi bi-star-fill i-active"></i><i class="bi bi-star-fill i-noactive"></i></div>
+                            </div>
                             <div class="revievs__card-text">Попробовала набор, так как это был мой первый опыт использования этой линейки продуктов. Пока что мне это очень нравится, и он придает моей коже гладкий и свежий вид утром и вечером</div>
                             <img src="img/img__catalog2.jpg" alt="">
                         </div>
@@ -79,6 +97,11 @@
                         <div class="revievs__card-avatar"></div>
                         <div class="revievs__card-section">
                             <div class="revievs__card-name">Алина</div>
+                            <div class="catalog__feedback">
+                                <div class="catalog__raiting"><i class="bi bi-star-fill i-active"></i><i
+                                        class="bi bi-star-fill i-active"></i><i class="bi bi-star-fill i-active"></i><i
+                                        class="bi bi-star-fill i-active"></i><i class="bi bi-star-fill i-noactive"></i></div>
+                            </div>
                             <div class="revievs__card-text">Попробовала набор, так как это был мой первый опыт использования этой линейки продуктов. Пока что мне это очень нравится, и он придает моей коже гладкий и свежий вид утром и вечером</div>
                         </div>
                     </div>
@@ -87,7 +110,7 @@
             </div>
                 <div class="reviews__title">
                     <div class="reviews__h3">Вам также могут понравиться</div>
-                    <p>Смотреть все</p>
+
                 </div>
                 <div class="catalog__offer">
                     <div class="catalog__card">
