@@ -39,9 +39,12 @@ footer {
 header {
     background-color: var(--color-white);
     min-height: 80px;
-    margin-bottom: 40px;
     display: flex;
     justify-content: center;
+    position: fixed;
+    top: 0;
+    z-index: 1;
+    width: 100%;
 }
 nav {
     width: 1400px;
@@ -82,6 +85,7 @@ nav {
 }
 main {
     flex-grow: 1;
+    margin-top: 100px;
 }
 .container {
     max-width: 1400px;
@@ -365,6 +369,7 @@ main {
     flex-shrink: 0;
     padding: 20px;
     border-radius: 6px;
+    margin-bottom: 40px;
 }
 .filter-color {
     display: flex;
