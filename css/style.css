@@ -1,6 +1,6 @@
 :root {
     --color-white: white;
-    --color-off-white:rgb(247, 247, 247);
+    --color-off-white:rgb(236, 236, 236);
     --color-gray: rgb(223, 225, 227);
     --color-blue-gray: rgb(105, 117, 134);
     --color-black: rgb(56, 56, 56);
@@ -79,17 +79,17 @@ nav {
     align-items: center;
 }
 .main-menu__link--active {
-    text-decoration: none;
-    font-size: var(--font-sise-body1);
     color: var(--color-pink);
 }
 .menu__link--active {
     display: flex;
     flex-direction: column;
     align-items: center;
-    text-decoration: none;
-    font-size: var(--font-sise-body1);
     color: var(--color-pink);
+}
+.navigation {
+    text-decoration: none;
+    margin-top: 20px;
 }
 main {
     flex-grow: 1;
@@ -517,7 +517,8 @@ input[type="checkbox"]:disabled :checked {
 .product {
     display: flex;
     flex-direction: row;
-    gap: 120px;
+    justify-content: center;
+    gap: 5%;
 }
 .product__title {
     font-size: var(--font-sise-h3);
@@ -545,9 +546,13 @@ input[type="checkbox"]:disabled :checked {
     flex-direction: column;
     gap: 20px;
 }
-.product-img-big {
+.swiper-card {
     width: 495px;
     height: 495px;
+}
+.product-img-big {
+    width: 100%;
+    height: 100%;
 }
 .product-img-small {
     display: flex;
@@ -560,9 +565,6 @@ input[type="checkbox"]:disabled :checked {
     background-color: var(--color-gray);
 }
 .img-small--active {
-    width: 83px;
-    height: 83px;
-    background-color: var(--color-gray);
     border: 1px solid var(--color-purple);
 }
 .product__click {
@@ -694,6 +696,35 @@ input[type="checkbox"]:disabled :checked {
     margin-top: 20px;
     margin-bottom: 40px;
 }
+@media (max-width:1200px) {
+    .product {
+        gap: 40px;
+    } 
+    .img-small {
+        width: 50px;
+        height: 50px;
+    }
+    .swiper-card {
+        width: 360px;
+        height: 360px;
+    }
+    .catalog__offer {
+        grid-template-columns: repeat(3, 1fr); 
+    }
+}
+@media (max-width:576px) {
+    .product {
+        flex-direction: column;
+    }
+    .product-img {
+        align-items: center;
+    }
+}
+@media (max-width:425px) {
+    .catalog__offer {
+        grid-template-columns: repeat(2, 1fr); 
+    }
+}
 
 /*---------ОФОРМЛЕНИЕ ЗАКАЗА-----------*/
 
@@ -782,6 +813,7 @@ input[type="checkbox"]:disabled :checked {
 .order__card-price {
     font-size: var(--font-sise-body2);
     color: var(--color-blue-gray);
+    margin-top: 10px;
 }
 .order__card-close {
     display: flex;
@@ -790,13 +822,26 @@ input[type="checkbox"]:disabled :checked {
     gap: 20px;
     margin-top: 20px;
 }
+@media (max-width:768px) {
+    .ordering {
+    flex-direction: column;
+    }
+    .information {
+        width: 100%;
+    }
+    .order {
+        width: 100%;
+    }
+}
 
-/*---------ОФОРМЛЕНИЕ ЗАКАЗА-----------*/
+/*---------КОРЗИНА-----------*/
 
 .bag {
     display: flex;
     flex-direction: row;
     gap: 20px;
+    max-width: 1800px;
+    justify-content: center;
     margin-bottom: 40px;
 }
 .bag__order {
@@ -816,15 +861,16 @@ input[type="checkbox"]:disabled :checked {
 .bag__btn {
     position: relative;
     background-color: var(--color-white);
-    width: 100%;
+    width: 160px;
     padding: 10px;
     border: 1px solid var(--color-black);
     border-radius: 4px;
     color: var(--color-black);
     font-family: "Montserrat", serif;
-
     transition: 0.3s ease-in;
-    margin-top: 50px;
+    margin-top: 20px;
+    text-decoration: none;
+    display: block;
 }
 .bag__btn:hover,
 .bag__btn:focus,
@@ -832,7 +878,29 @@ input[type="checkbox"]:disabled :checked {
     background-color: var(--color-black);
     color: var(--color-white);
 }
+.bag__info h4 {
+    margin-bottom: 10px;
+}
 .bag__info s {
     font-size: var(--font-sise-body2);
     color: var(--color-blue-gray);
+}
+.bag__info p {
+    font-size: var(--font-sise-body1);
+    margin-top: 6px;
+}
+@media (max-width:768px) {
+    .bag {
+    flex-direction: column;
+    }
+    .bag__order {
+        width: 100%;
+    }
+    .bag__info {
+        width: 100%;
+    }
+    .bag__order img {
+        width: 150px;
+        height: 150px;
+    }
 }
