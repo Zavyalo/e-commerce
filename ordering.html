@@ -16,87 +16,124 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
         rel="stylesheet">
+    <script defer src="scripts/validation.js"></script>
 </head>
 
 <body>
     <header>
-        <a href="bag.html">Назад</a>
+        <nav>
+            <a class="main-menu__link" href="#"><img src="img/logo.png" alt=""></a>
+            <ul class="main-menu">
+                <li><a class="main-menu__link" href="index.html">Каталог</a></li>
+                <li><a class="main-menu__link" href="#">Акции</a></li>
+                <li><a class="main-menu__link" href="#">О нас</a></li>
+                <li><a class="main-menu__link" href="#">Блог</a></li>
+            </ul>
+            <ul class="menu">
+                <li><a class="menu__link" href="#"><i class="bi bi-search"></i>Поиск</a></i></li>
+                <li><a class="menu__link menu__link--active" href="bag.html"><i class="bi bi-bag"></i>Корзина</a></i>
+                </li>
+                <li><a class="menu__link" href="#"><i class="bi bi-person"></i>Аккаунт</a></li>
+            </ul>
+        </nav>
     </header>
     <main>
         <section>
-            <div class="ordering">
-                <div class="information">
-                    <p>Информация о покупателе</p>
-                    <form action="">
-                        <div class="form-email">
-                            <div><label for="email" class="form-lable">Введите эл. почту</label></div>
-                            <div><input type="email" id="email" class="form-field"></div>
-                        </div>
-                        <div class="form-phone">
-                            <div><label for="phone" class="form-lable">Введите телефон</label></div>
-                            <div><input type="tel" id="phone" class="form-field"></div>
-                        </div>
-                        <div class="form-name">
-                            <div><label for="name" class="form-lable">Введите имя</label></div>
-                            <div><input type="text" id="name" class="form-field"></div>
-                        </div>
-                        <div class="form-lastname">
-                            <div><label for="lastname" class="form-lable">Введите фамилию</label></div>
-                            <div><input type="text" id="lastname" class="form-field"></div>
-                        </div>
-                    </form>
-                    <p>Адрес доставки</p>
-                    <form action="">
-                        <div class="form-adress">
-                            <div><label for="adress" class="form-lable">Введите адрес доставки</label></div>
-                            <div><input type="text" id="adress" class="form-field"></div>
-                        </div>
-                        <div class="form-comment">
-                            <div><label for="comment" class="form-lable">Введите комментарй к заказу</label></div>
-                            <div><textarea name="comment" id="comment" class="form-field"></textarea></div>
-                        </div>
-                    </form>
-                    <p>Способ оплаты</p>
-                    <div class="payment">
-                        <div class="filter-skin">
-                            <div class="filter-skin__item">
-                                <input type="radio" name="skin" id="skin-dry" class="filter-skin__radio">
-                                <label for="skin-dry" class="filter-skin__label" id="skin-dry-label"
-                                    aria-label="сухая кожа" role="radio" aria-checked="false">Банковской картой</label>
+            <div class="container">
+                <div class="navigation"><a href="index.html">Каталог</a> -> <a href="bag.html">Корзина</a> -> <a href="ordering.html">Оформление заказа</a></div>
+                <div class="ordering">
+                    <div class="information">
+                        <p>Информация о покупателе</p>
+                        <form action="" id="form-ordering" novalidate>
+                            <div class="form-item">
+                                <div><label for="email" class="form-lable">Введите эл. почту</label></div>
+                                <div><input type="email" id="email" required class="form-field"></div>
                             </div>
-                            <div class="filter-skin__item">
-                                <input type="radio" name="skin" id="skin-oily" class="filter-skin__radio">
-                                <label for="skin-oily" class="filter-skin__label" id="skin-oily-label"
-                                    aria-label="комбинированная кожа" role="radio" aria-checked="false">СБП</label>
+                            <div class="form-item">
+                                <div><label for="phone" class="form-lable">Введите телефон</label></div>
+                                <div><input type="tel" id="phone" required class="form-field"></div>
+                            </div>
+                            <div class="form-item">
+                                <div><label for="name" class="form-lable">Введите имя</label></div>
+                                <div><input type="text" id="name" required class="form-field"></div>
+                            </div>
+                            <div class="form-item">
+                                <div><label for="lastname" class="form-lable">Введите фамилию</label></div>
+                                <div><input type="text" id="lastname" required class="form-field"></div>
+                            </div>
+                        </form>
+                        <p>Адрес доставки</p>
+                        <form action="">
+                            <div class="form-adress">
+                                <div><label for="adress" class="form-lable">Введите адрес доставки</label></div>
+                                <div><input type="text" id="adress" required class="form-field"></div>
+                            </div>
+                            <div class="form-comment">
+                                <div><label for="comment" class="form-lable">Введите комментарй к заказу</label></div>
+                                <div><textarea name="comment" id="comment" class="form-field"></textarea></div>
+                            </div>
+                        </form>
+                        <p>Способ оплаты</p>
+                        <div class="payment">
+                            <div class="filter-skin">
+                                <div class="filter-skin__item">
+                                    <input type="radio" name="skin" id="skin-dry" class="filter-skin__radio">
+                                    <label for="skin-dry" class="filter-skin__label" id="skin-dry-label"
+                                        aria-label="сухая кожа" role="radio" aria-checked="false">Банковской
+                                        картой</label>
+                                </div>
+                                <div class="filter-skin__item">
+                                    <input type="radio" name="skin" id="skin-oily" class="filter-skin__radio">
+                                    <label for="skin-oily" class="filter-skin__label" id="skin-oily-label"
+                                        aria-label="комбинированная кожа" role="radio" aria-checked="false">СБП</label>
+                                </div>
+                            </div>
+                            <button class="ordering__btn">Оформить заказ</button>
+                        </div>
+                    </div>
+                    <div class="order">
+                        <p>Ваш заказ</p>
+                        <div class="order__card">
+                            <img src="img/img__catalog2.jpg" alt="">
+                            <div class="order__card-text">
+                                <div class="order__card-name">Увлажняющий крем Dewy Glow</div>
+                                <div class="order__card-price">1200 &#8381;</div>
+                                <div class="order__card-close">
+                                    <div class="order__card-quantity">
+                                        <p>-</p>
+                                        <p>1</p>
+                                        <p>+</p>
+                                    </div><i class="bi bi-x-lg"></i>
+                                </div>
                             </div>
                         </div>
-                        <button class="ordering__btn">Оформить заказ</button>
-                    </div>
-                </div>
-                <div class="order">
-                    <p>Ваш заказ</p>
-                    <div class="order__card">
-                        <img src="img/img__catalog2.jpg" alt="">
-                        <div class="order__card-text">
-                            <div class="order__card-name">Увлажняющий крем Dewy Glow</div>
-                            <div class="order__card-price">1200 &#8381;</div>
-                            <div class="order__card-close"><div class="order__card-quantity"><p>-</p><p>1</p><p>+</p></div><i class="bi bi-x-lg"></i></div>
+                        <div class="order__card">
+                            <img src="img/img__catalog2.jpg" alt="">
+                            <div class="order__card-text">
+                                <div class="order__card-name">Увлажняющий крем Dewy Glow</div>
+                                <div class="order__card-price">1200 &#8381;</div>
+                                <div class="order__card-close">
+                                    <div class="order__card-quantity">
+                                        <p>-</p>
+                                        <p>1</p>
+                                        <p>+</p>
+                                    </div><i class="bi bi-x-lg"></i>
+                                </div>
+                            </div>
                         </div>
-                    </div>
-                    <div class="order__card">
-                        <img src="img/img__catalog2.jpg" alt="">
-                        <div class="order__card-text">
-                            <div class="order__card-name">Увлажняющий крем Dewy Glow</div>
-                            <div class="order__card-price">1200 &#8381;</div>
-                            <div class="order__card-close"><div class="order__card-quantity"><p>-</p><p>1</p><p>+</p></div><i class="bi bi-x-lg"></i></div>
-                        </div>
-                    </div>
-                    <div class="order__card">
-                        <img src="img/img__catalog2.jpg" alt="">
-                        <div class="order__card-text">
-                            <div class="order__card-name">Увлажняющий крем Dewy Glow</div>
-                            <div class="order__card-price">1200 &#8381;</div>
-                            <div class="order__card-close"><div class="order__card-quantity"><p>-</p><p>1</p><p>+</p></div><i class="bi bi-x-lg"></i></div>
+                        <div class="order__card">
+                            <img src="img/img__catalog2.jpg" alt="">
+                            <div class="order__card-text">
+                                <div class="order__card-name">Увлажняющий крем Dewy Glow</div>
+                                <div class="order__card-price">1200 &#8381;</div>
+                                <div class="order__card-close">
+                                    <div class="order__card-quantity">
+                                        <p>-</p>
+                                        <p>1</p>
+                                        <p>+</p>
+                                    </div><i class="bi bi-x-lg"></i>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>

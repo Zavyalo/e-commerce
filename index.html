@@ -16,6 +16,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
         rel="stylesheet">
+    <script defer src="scripts/filter-prise.js"></script>
 </head>
 
 <body>
@@ -38,7 +39,6 @@
     <main>
         <section>
             <div class="container catalog">
-                <!-- <div class="navigation"><a href="#">Главная</a> -> <a href="index.html">Каталог</a></div> -->
                 <div class="catalog__filter">
                     <h4>ФИЛЬТРЫ</h4>
                     <div class="filter__subtitle">Категория товара</div>
@@ -66,8 +66,21 @@
                                 role="checkbox" aria-checked="false">Сыворотка</label>
                         </div>
                     </div>
-                    <div class="filter__subtitle">Цвет</div>
-                    <div class="filter-color">
+                    <div class="filter__subtitle">Цена</div>
+                    <div class="filter-price">
+                        <div class="filter-price__container">
+                            <div class="filter-price__slider">
+                                <div class="filter-price__progress"></div>
+                            </div>
+                            <input type="range" class="filter-price__range min" min="0" max="10000" value="0" tabindex="0">
+                            <input type="range" class="filter-price__range" min="0" max="10000" value="10000" tabindex="0">
+                        </div>
+                        <div class="filter-price__values">
+                            <div class="filter-price__min"> от <span>0</span> &#8381;</div>
+                            <div class="filter-price__max"> до <span>0</span> &#8381;</div>
+                        </div>
+                    </div>
+                    <!-- <div class="filter-color">
                         <div class="filter-color__item">
                             <input type="checkbox" name="color-red" id="color-red" class="filter-color__checkbox">
                             <label for="color-red" class="filter-color__label" aria-label="красный цвет"
@@ -88,7 +101,7 @@
                             <label for="color-yellow" class="filter-color__label" aria-label="желтый цвет"
                                 style="background-color: yellow;"></label>
                         </div>
-                    </div>
+                    </div> -->
                     <div class="filter-section">
                         <div class="filter__subtitle">Тип кожи</div>
                         <div class="filter-skin">
@@ -169,8 +182,10 @@
                                 <a href="card.html" class="catalog__title">Солнцезащитный крем для лица SPF 30</a>
                                 <div class="catalog__feedback">
                                     <div class="catalog__raiting"><i class="bi bi-star-fill i-active"></i><i
-                                            class="bi bi-star-fill i-active"></i><i class="bi bi-star-fill i-active"></i><i
-                                            class="bi bi-star-fill i-active"></i><i class="bi bi-star-fill i-noactive"></i>(0)</div>
+                                            class="bi bi-star-fill i-active"></i><i
+                                            class="bi bi-star-fill i-active"></i><i
+                                            class="bi bi-star-fill i-active"></i><i
+                                            class="bi bi-star-fill i-noactive"></i>(0)</div>
                                 </div>
                                 <p class="catalog__description">Clarins Creme Solaire Jeunesse</p>
                                 <div class="catalog__price">
@@ -351,12 +366,12 @@
                     <div class="pagination">
                         <a href="#" class="pagination__href">
                             &lt; Назад</a>
-                                <a href="#" class="pagination__namder pagination__active">1</a>
-                                <a href="#" class="pagination__namder">2</a>
-                                <a href="#" class="pagination__namder">3</a>
-                                <a href="#" class="pagination__namder">4</a>
-                                <a href="#" class="pagination__namder">5</a>
-                                <a href="#" class="pagination__href">Вперед ></a>
+                        <a href="#" class="pagination__namder pagination__active">1</a>
+                        <a href="#" class="pagination__namder">2</a>
+                        <a href="#" class="pagination__namder">3</a>
+                        <a href="#" class="pagination__namder">4</a>
+                        <a href="#" class="pagination__namder">5</a>
+                        <a href="#" class="pagination__href">Вперед ></a>
                     </div>
                 </div>
             </div>
