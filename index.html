@@ -7,7 +7,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Каталог товаров</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
-    <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="card.html">
     <link rel="stylesheet" href="index.html">
@@ -17,6 +16,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
         rel="stylesheet">
     <script defer src="scripts/filter-prise.js"></script>
+    <script defer src="scripts/sort.js"></script>
 </head>
 
 <body>
@@ -40,6 +40,7 @@
         <section>
             <div class="container catalog">
                 <div class="catalog__filter">
+                    <div id="btn-close-filter-panel"><i class="bi bi-x-lg"></i></div>
                     <h4>ФИЛЬТРЫ</h4>
                     <div class="filter__subtitle">Категория товара</div>
                     <div class="filter-type">
@@ -72,8 +73,10 @@
                             <div class="filter-price__slider">
                                 <div class="filter-price__progress"></div>
                             </div>
-                            <input type="range" class="filter-price__range min" min="0" max="10000" value="0" tabindex="0">
-                            <input type="range" class="filter-price__range" min="0" max="10000" value="10000" tabindex="0">
+                            <input type="range" class="filter-price__range min" min="0" max="10000" value="0"
+                                tabindex="0">
+                            <input type="range" class="filter-price__range" min="0" max="10000" value="10000"
+                                tabindex="0">
                         </div>
                         <div class="filter-price__values">
                             <div class="filter-price__min"> от <span>0</span> &#8381;</div>
@@ -157,16 +160,19 @@
                     </div>
                 </div>
                 <div class="catalog__container">
-
-
-                    <div class="filter__section">
-                        <p>Сортировать по</p>
-                        <select class="filter-sort" name="sort" id="sort" aria-label="Сортировка товаров">
-                            <option value="popular">По популярности</option>
-                            <option value="price-asc">По возрастанию цены</option>
-                            <option value="price-desc">По убыванию цены</option>
-                            <option value="price-new">Сначала новые</option>
-                        </select>
+                    <div class="catalog__container-sort">
+                        <div class="filter__section">
+                            <p>Сортировать по</p>
+                            <select class="filter-sort" name="sort" id="sort" aria-label="Сортировка товаров">
+                                <option value="popular">По популярности</option>
+                                <option value="price-asc">По возрастанию цены</option>
+                                <option value="price-desc">По убыванию цены</option>
+                                <option value="price-new">Сначала новые</option>
+                            </select>
+                        </div>
+                        <div class="catalog__sort">
+                            <button id="btn-show-filter-panel"><i class="bi bi-filter"></i>Фильтр</button>
+                        </div>
                     </div>
                     <div class="catalog__grid">
                         <div class="catalog__card">
@@ -381,29 +387,29 @@
     <footer>
         <div class="footer__grig">
             <div class="footer__block">
-                <a class="main-menu__link" href="#"><img src="img/logo-light.png" alt=""></a>
-                <div>Откройте для себя <br> красоту природы с нашей натуральной косметикой</div>
-                <p class="footer__text">&copy; 2023 Bloom Beauty</p>
+                <div class="main-menu__link" href="#"><img src="img/logo-light.png" alt=""></div>
+                <p>Откройте для себя <br> красоту природы с нашей натуральной косметикой</p>
+                <div class="footer__text">&copy; 2023 Bloom Beauty</div>
             </div>
             <div class="footer__block">
+                <div class="footer__title">КОНТАКТЫ</div>
                 <ul>
-                    <div class="footer__title">КОНТАКТЫ</div>
                     <li>bloombt@email.com</li>
                     <li>+7(951)400-30-55</li>
                     <li>vk.com/bloombeauty</li>
                 </ul>
             </div>
             <div class="footer__block">
+                <div class="footer__title">ПОКУПАТЕЛЯМ</div>
                 <ul>
-                    <div class="footer__title">ПОКУПАТЕЛЯМ</div>
                     <li>Вопрос-ответ</li>
                     <li>Доставка и возврат</li>
                     <li>Пользовательское соглашение</li>
                 </ul>
             </div>
             <div class="footer__block">
+                <div class="footer__title">О НАС</div>
                 <ul>
-                    <div class="footer__title">О НАС</div>
                     <li>О компании</li>
                     <li>Блог</li>
                 </ul>
@@ -412,7 +418,10 @@
                 <ul>
                     <div class="footer__title">РАССЫЛКА</div>
                     <p>Будьте в курсе событий, подпишитесь на нашу рассылку прямо сейчас!</p>
-                    <label for="email" class="form-lable">Введите эл. почту</label>
+                    <div class="form-item">
+                        <div><label for="email" class="form-lable">Введите эл. почту</label></div>
+                        <div><input type="email" id="email" required class="form-field"></div>
+                    </div>
                     <a href="#">Подписаться -></a>
                 </ul>
             </div>

@@ -7,7 +7,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Каталог товаров</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
-    <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="index.html">
     <link rel="stylesheet" href="card.html">
@@ -48,22 +47,25 @@
                             <div class="form-item">
                                 <div><label for="email" class="form-lable">Введите эл. почту</label></div>
                                 <div><input type="email" id="email" required class="form-field"></div>
+                                <div class="form__message-validate"></div>
                             </div>
                             <div class="form-item">
                                 <div><label for="phone" class="form-lable">Введите телефон</label></div>
                                 <div><input type="tel" id="phone" required class="form-field"></div>
+                                <div class="form__message-validate"></div>
                             </div>
                             <div class="form-item">
                                 <div><label for="name" class="form-lable">Введите имя</label></div>
                                 <div><input type="text" id="name" required class="form-field"></div>
+
                             </div>
                             <div class="form-item">
                                 <div><label for="lastname" class="form-lable">Введите фамилию</label></div>
                                 <div><input type="text" id="lastname" required class="form-field"></div>
                             </div>
-                        </form>
+                       
                         <p>Адрес доставки</p>
-                        <form action="">
+                      
                             <div class="form-adress">
                                 <div><label for="adress" class="form-lable">Введите адрес доставки</label></div>
                                 <div><input type="text" id="adress" required class="form-field"></div>
@@ -72,7 +74,7 @@
                                 <div><label for="comment" class="form-lable">Введите комментарй к заказу</label></div>
                                 <div><textarea name="comment" id="comment" class="form-field"></textarea></div>
                             </div>
-                        </form>
+                        
                         <p>Способ оплаты</p>
                         <div class="payment">
                             <div class="filter-skin">
@@ -88,8 +90,9 @@
                                         aria-label="комбинированная кожа" role="radio" aria-checked="false">СБП</label>
                                 </div>
                             </div>
-                            <button class="ordering__btn">Оформить заказ</button>
+                            <button class="ordering__btn" type="submit">Оформить заказ</button>
                         </div>
+                        </form>
                     </div>
                     <div class="order">
                         <p>Ваш заказ</p>
