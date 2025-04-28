@@ -61,6 +61,7 @@ footer {
     color: var(--color-pink);
     margin-top: 12px;
     display: block;
+    white-space: nowrap;
 }
 .footer li {
     font-weight: var(--font-sise-body2);
@@ -99,6 +100,7 @@ nav {
     text-decoration: none;
     font-size: var(--font-sise-body1);
     color: var(--color-black);
+    white-space: nowrap;
 }
 .menu__link {
     text-decoration: none;
@@ -107,6 +109,7 @@ nav {
     display: flex;
     flex-direction: column;
     align-items: center;
+    white-space: nowrap;
 }
 .main-menu__link:hover,
 .main-menu__link:focus,
@@ -118,6 +121,19 @@ nav {
 .menu__link:active {
     color: var(--color-pink);
 }
+.menu__bag {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--color-purple);
+    color: var(--color-white);
+    text-decoration: none;
+    border-radius: 40px;
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    margin-left: 60px;
+}
 .navigation {
     margin: 30px 0px 20px 0px;
     color: var(--color-blue-gray);
@@ -125,20 +141,21 @@ nav {
 .navigation a {
     text-decoration: none;
     color: var(--color-blue-gray);
+    white-space: nowrap;
 }
 main {
     flex-grow: 1;
     margin-top: 100px;
 }
 .container {
-    max-width: 1200px;
+    max-width: 1400px;
     margin: 0 auto;
     position: relative;
     background-color: var(--color-off-white);
 }
 @media (max-width:1800px) {
     .container {
-        max-width: 1200px;
+        max-width: 1400px;
     }
 }
 @media (max-width:1600px) {
@@ -248,11 +265,6 @@ main {
     aspect-ratio: 1;
     object-fit: cover;
 }
-.catalog__price {
-    display: flex;
-    flex-direction: row;
-    align-items: baseline;
-}
 .price-now {
     font-size: var(--font-sise-body1);
     color: var(--color-black);
@@ -286,6 +298,7 @@ main {
     border: 1px solid var(--color-black);
     border-radius: 4px;
     color: var(--color-black);
+    margin-top: 20px;
     transition: 0.3s ease-in;
     font-size: var(--font-sise-subtitle2);
     font-family: "Montserrat", serif;
@@ -295,6 +308,21 @@ main {
 .catalog__btn:active {
     background-color: var(--color-black);
     color: var(--color-white);
+}
+.catalog__btn-active {
+    background-color: var(--color-black);
+    color: var(--color-white);
+    text-decoration: none;
+    display: block;
+    display: flex;
+    justify-content: center;
+}
+.catalog__btn-active:hover,
+.catalog__btn-active:focus,
+.catalog__btn-active:active {
+    background-color: var(--color-purple);
+    color: var(--color-white);
+    border: 1px solid var(--color-purple);
 }
 .img__wrapper {
     position: relative;
@@ -433,7 +461,6 @@ main {
     font-size: var(--font-sise-body1);
     color: var(--color-blue-gray);
     margin-right: 20px;
-    white-space: nowrap;
 }
 .filter-sort {
     width: 100%;
@@ -710,10 +737,9 @@ input[type=range].filter-price__slider::-ms-thumb {
     flex-direction: row;
     gap: 20px;
 }
-.img-small {
+.img-small img {
     width: 83px;
     height: 83px;
-    background-color: var(--color-gray);
 }
 .img-small--active {
     border: 1px solid var(--color-purple);
