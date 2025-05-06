@@ -23,7 +23,10 @@
 <body>
     <header>
         <nav>
-            <a class="main-menu__link" href="#"><img src="img/logo.png" alt=""></a>
+            <div class="menu-burger">
+                <div class="burger"><i class="bi bi-justify"></i></div>
+                <a class="main-menu__link" href="#"><img src="img/logo.png" alt=""></a>
+            </div>
             <ul class="main-menu">
                 <li><a class="main-menu__link main-menu__link--active" href="index.html">Каталог</a></li>
                 <li><a class="main-menu__link" href="#">Акции</a></li>
@@ -33,7 +36,7 @@
             <ul class="menu">
                 <li><a class="menu__link" href="#"><i class="bi bi-search"></i>Поиск</a></i></li>
                 <li><a class="menu__link" href="bag.html"><i class="bi bi-bag"></i>Корзина</a></i></li>
-                <li><a class="menu__link" href="#"><i class="bi bi-person"></i>Аккаунт</a></li>
+                <li><a class="menu__link" href="authorization.html"><i class="bi bi-person"></i>Аккаунт</a></li>
             </ul>
         </nav>
     </header>
@@ -64,7 +67,7 @@
                             <div class="swiper-pagination"></div>
                         </div>
                         <div class="product-img-small">
-                            <div class="img-small img-small--active"><img src="img/img__catalog7.jpg" alt=""></div>
+                            <div class="img-small img-small--active"><img src="img/img__catalog2.jpg" alt=""></div>
                             <div class="img-small"><img src="img/img__catalog3.jpg" alt=""></div>
                             <div class="img-small"><img src="img/img__catalog4.jpg" alt=""></div>
                             <div class="img-small"><img src="img/img__catalog5.jpg" alt=""></div>
@@ -256,7 +259,47 @@
         </section>
     </main>
     <footer>
-
+        <div class="footer__grig">
+            <div class="footer__block">
+                <div class="main-menu__link" href="#"><img src="img/logo-light.png" alt=""></div>
+                <p>Откройте для себя <br> красоту природы с нашей натуральной косметикой</p>
+                <div class="footer__text">&copy; 2023 Bloom Beauty</div>
+            </div>
+            <div class="footer__block footer__block-hide">
+                <div class="footer__title">КОНТАКТЫ</div>
+                <ul>
+                    <li>bloombt@email.com</li>
+                    <li>+7(951)400-30-55</li>
+                    <li>vk.com/bloombeauty</li>
+                </ul>
+            </div>
+            <div class="footer__block footer__block-hide">
+                <div class="footer__title">ПОКУПАТЕЛЯМ</div>
+                <ul>
+                    <li>Вопрос-ответ</li>
+                    <li>Доставка и возврат</li>
+                    <li>Пользовательское соглашение</li>
+                </ul>
+            </div>
+            <div class="footer__block footer__block-hide">
+                <div class="footer__title">О НАС</div>
+                <ul>
+                    <li>О компании</li>
+                    <li>Блог</li>
+                </ul>
+            </div>
+            <div class="footer__block">
+                <ul>
+                    <div class="footer__title">РАССЫЛКА</div>
+                    <p>Будьте в курсе событий, подпишитесь на нашу рассылку прямо сейчас!</p>
+                    <div class="form-item">
+                        <div><label for="email" class="form-lable">Введите эл. почту</label></div>
+                        <div><input type="email" id="email" required class="form-field"></div>
+                    </div>
+                    <a href="#">Подписаться -></a>
+                </ul>
+            </div>
+        </div>
     </footer>
 </body>
 

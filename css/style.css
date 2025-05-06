@@ -42,7 +42,7 @@ footer {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
     gap: 30px;
-    width: 1400px;
+    width: 1200px;
     color: var(--color-white);
     margin-top: 50px;
 }
@@ -134,6 +134,14 @@ nav {
     position: absolute;
     margin-left: 60px;
 }
+.menu-burger {
+    display: flex;
+    align-items: center;
+}
+.menu-burger i {
+    margin-right: 10px;
+    display: none;
+}
 .navigation {
     margin: 30px 0px 20px 0px;
     color: var(--color-blue-gray);
@@ -162,10 +170,38 @@ main {
     .container {
         max-width: 1000px;
     }
+    header {
+        padding: 0px 30px 0px 30px;
+    }
+}
+@media (max-width:1400px) {
+    .footer__grig {
+        padding: 0px 30px 0px 30px;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
 }
 @media (max-width:1200px) {
     .container {
         max-width: 992px;
+    }
+    .main-menu {
+        gap: 20px;
+    }
+}
+@media (max-width:1000px) {
+    .main-menu {
+        display: none;
+    }
+    .footer__block-hide {
+        display: none;
+    }
+    .menu-burger i {
+        display: block;
+    }
+}
+@media (max-width:600px) {
+    .menu {
+        gap: 16px;
     }
 }
 .catalog {
@@ -176,6 +212,7 @@ main {
 .catalog__sort {
     background-color: var(--color-off-white);
     min-height: 40px;
+    margin-left: 20px;
 }
 .catalog__content {
     flex-grow: 1;
@@ -235,11 +272,16 @@ main {
     display: block;
 }
 @media (max-width:576px) {
-    .catalog__grid {
-    grid-template-columns: repeat(1, 1fr);
-    }
     .catalog__filter {
         width: 100%;
+    }
+    .menu {
+        display: none;
+    }
+}
+@media (max-width:320px) {
+    .catalog__grid {
+    grid-template-columns: repeat(1, 1fr);
     }
 }
 
@@ -874,6 +916,9 @@ input[type=range].filter-price__slider::-ms-thumb {
     margin-bottom: 40px;
 }
 @media (max-width:1200px) {
+    .container {
+        padding: 20px;
+    }
     .product {
         gap: 40px;
     } 
@@ -889,6 +934,28 @@ input[type=range].filter-price__slider::-ms-thumb {
         grid-template-columns: repeat(3, 1fr); 
     }
 }
+@media (max-width:768px) {
+    /* .swiper-card {
+        width: 300px;
+        height: 300px;
+    }
+    .img-small img {
+        width: 58px;
+        height: 58px;
+    }
+    .product-img-small {
+        gap: 10px;
+    } */
+    .product {
+        flex-direction: column;
+    }
+    .product-img {
+        align-items: center;
+    }
+    .catalog__offer {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
 @media (max-width:576px) {
     .product {
         flex-direction: column;
@@ -896,10 +963,13 @@ input[type=range].filter-price__slider::-ms-thumb {
     .product-img {
         align-items: center;
     }
-}
-@media (max-width:425px) {
     .catalog__offer {
-        grid-template-columns: repeat(2, 1fr); 
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+@media (max-width:460px) {
+    .catalog__offer {
+        grid-template-columns: repeat(1, 1fr); 
     }
 }
 
@@ -976,7 +1046,7 @@ input[type=range].filter-price__slider::-ms-thumb {
     border-radius: 6px;
     border: 1px solid var(--color-blue-gray);
     padding: 6px;
-    width: 60%;
+    width: 50%;
 }
 .form-field.valid {
     border: 1px solid rgb(80, 230, 125);
@@ -996,6 +1066,9 @@ input[type=range].filter-price__slider::-ms-thumb {
     border: 1px solid var(--color-black);
     border-radius: 8px;
     width: 90px;
+}
+.order__card-quantity button {
+    border: none;
 }
 .order__card-price {
     font-size: var(--font-sise-body2);
@@ -1090,4 +1163,32 @@ input[type=range].filter-price__slider::-ms-thumb {
         width: 150px;
         height: 150px;
     }
+}
+
+/*---------ВХОД И РЕГИСТРАЦИЯ-----------*/
+
+.login {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 600px;
+}
+.login-modal {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: var(--color-white);
+    width: 350px;
+    padding: 30px;
+    border-radius: 10px;
+}
+.form-field-login {
+    width: 100%;
+}
+.login-modal h4 {
+    color: var(--color-blue-gray);
+    margin-bottom: 10px;
+}
+.login-modal p {
+    margin-top: 16px;
 }
