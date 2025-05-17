@@ -279,7 +279,7 @@ main {
         display: none;
     }
 }
-@media (max-width:320px) {
+@media (max-width:375px) {
     .catalog__grid {
     grid-template-columns: repeat(1, 1fr);
     }
@@ -503,6 +503,7 @@ main {
     font-size: var(--font-sise-body1);
     color: var(--color-blue-gray);
     margin-right: 20px;
+    white-space: nowrap;
 }
 .filter-sort {
     width: 100%;
