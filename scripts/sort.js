@@ -8,5 +8,9 @@ btnShowFilterPanel.addEventListener("click", () => {
 
 const btnCloseFilterPanel = document.getElementById("btn-close-filter-panel");
 btnCloseFilterPanel.addEventListener("click", () => {
+    filterPanel.style.transition="transform 0.7s ease-in-out";
     filterPanel.classList.remove("show-filter-panel");
+    setInterval(()=>{
+        filterPanel.style.transition="";
+    },3000)
 })

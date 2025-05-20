@@ -29,13 +29,14 @@
         rel="stylesheet">
     <script defer src="scripts/filter-prise.js"></script>
     <script defer src="scripts/sort.js"></script>
+    <script defer src="scripts/burger.js"></script>
 </head>
 
 <body>
     <header>
         <nav>
-            <div class="menu-burger">
-                <div class="burger"><i class="bi bi-justify"></i></div>
+            <div class="burger">
+                <div class="btn-show-burger-panel"><i class="bi bi-justify"></i></div>
                 <a class="main-menu__link" href="#"><img src="img/logo.png" alt=""></a>
             </div>
             <ul class="main-menu">
@@ -54,6 +55,18 @@
     </header>
     <main>
         <section>
+            <div class="catalog__burger">
+                <div class="menu-burger">
+                    <div class="btn-close-burger-panel"><i class="bi bi-x-lg"></i></div>
+                    <ul>
+                        <h4>МЕНЮ</h4>
+                        <li><a class="filter__subtitle" href="#">Поиск</a></li>
+                        <li><a class="filter__subtitle" href="index.html">Каталог</a></li>
+                        <li><a class="filter__subtitle" href="bag.html">Корзина</a></li>
+                        <li><a class="filter__subtitle" href="authorization.html">Аккаунт</a></li>
+                    </ul>
+                </div>
+            </div>
             <div class="container catalog">
                 <div class="catalog__filter">
                     <div id="btn-close-filter-panel"><i class="bi bi-x-lg"></i></div>

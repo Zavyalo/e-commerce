@@ -134,13 +134,68 @@ nav {
     position: absolute;
     margin-left: 60px;
 }
-.menu-burger {
+.burger {
     display: flex;
     align-items: center;
 }
-.menu-burger i {
+.burger i {
     margin-right: 10px;
     display: none;
+}
+.catalog__burger {
+    background-color: var(--color-white);
+    width: 290px;
+    flex-shrink: 0;
+    padding: 20px;
+    border-radius: 6px;
+    display: none;
+}
+@media (max-width:769px) {
+    .catalog__burger {
+        position: fixed;
+        z-index: 100;
+        left: 0;
+        top: 0;
+        bottom: 0;
+        display: flex;
+        overflow-y: scroll;
+        overflow-x: hidden;
+        scrollbar-width: thin;
+        scrollbar-color: var(--color-pink);
+        border: 1px solid var(--color-purple);
+        transform: translate(-100%);
+        transition: transform 0.7s ease-in-out;
+    }
+    .btn-show-burger-panel {
+        display: block;
+    }
+    .btn-close-burger-panel {
+        right: 10px;
+        display: block;
+        position: absolute;
+    }
+}
+.catalog__burger a {
+    text-decoration: none;
+}
+.catalog__burger a:focus,
+.catalog__burger a:active {
+    color: var(--color-pink);
+}
+.catalog__burger h4 {
+    margin-bottom: 20px;
+}
+.catalog__burger li {
+    text-decoration: none;
+    list-style-type: none;
+    margin-top: 6px;
+}
+.btn-close-burger-panel {
+    display: block;
+}
+.show-burger-panel {
+    transition: all 0.7s;
+    transform: translate(0);
 }
 .navigation {
     margin: 30px 0px 20px 0px;
@@ -195,7 +250,7 @@ main {
     .footer__block-hide {
         display: none;
     }
-    .menu-burger i {
+    .burger i {
         display: block;
     }
 }
@@ -246,12 +301,13 @@ main {
     right: 0;
     top: 80px;
     bottom: 0;
-    display: none;
     overflow-y: scroll;
     overflow-x: hidden;
     scrollbar-width: thin;
     scrollbar-color: var(--color-pink);
     border: 1px solid var(--color-purple);
+    transform: translate(100%);
+    
     }
     .catalog__grid {
         grid-template-columns: repeat(2, 1fr);
@@ -266,7 +322,8 @@ main {
     }
 }
 .show-filter-panel {
-    display: block;
+    transition: all 0.7s;
+    transform: translate(0);
 }
 .close-filter-panel {
     display: block;
@@ -532,6 +589,7 @@ main {
     padding: 20px;
     border-radius: 6px;
     margin-bottom: 40px;
+    /* transition: transform 0.7s ease-in-out; */
 }
 .filter-color {
     display: flex;
