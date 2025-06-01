@@ -34,7 +34,7 @@
         <nav>
             <div class="menu-burger">
                 <div class="burger"><i class="bi bi-justify"></i></div>
-                <a class="main-menu__link" href="#"><img src="img/logo.png" alt=""></a>
+                <a class="main-menu__link" href="index.html"><img src="img/logo.png" alt=""></a>
             </div>
             <ul class="main-menu">
                 <li><a class="main-menu__link" href="index.html">Каталог</a></li>
@@ -43,8 +43,8 @@
                 <li><a class="main-menu__link" href="#">Блог</a></li>
             </ul>
             <ul class="menu">
-                <li><a class="menu__link" href="#"><i class="bi bi-search"></i>Поиск</a></i></li>
-                <li><a class="menu__link menu__link--active" href="bag.html"><i class="bi bi-bag"></i>Корзина</a></i>
+                <li><a class="menu__link" href="#"><i class="bi bi-search"></i>Поиск</a></li>
+                <li><a class="menu__link menu__link--active" href="bag.html"><i class="bi bi-bag"></i>Корзина</a>
                 </li>
                 <li><a class="menu__link" href="#"><i class="bi bi-person"></i>Аккаунт</a></li>
             </ul>
@@ -53,11 +53,12 @@
     <main>
         <section>
             <div class="container">
-                <div class="navigation"><a href="index.html">Каталог</a> -> <a href="bag.html">Корзина</a> -> <a href="ordering.html">Оформление заказа</a></div>
+                <div class="navigation"><a href="index.html">Каталог</a> -> <a href="bag.html">Корзина</a> -> <a
+                        href="ordering.html">Оформление заказа</a></div>
                 <div class="ordering">
                     <div class="information">
                         <p>Информация о покупателе</p>
-                        <form action="" id="form-ordering" novalidate>
+                        <form id="form-ordering" novalidate>
                             <div class="form-item">
                                 <div><label for="email" class="form-lable">Введите эл. почту</label></div>
                                 <div><input type="email" id="email" required class="form-field"></div>
@@ -77,9 +78,9 @@
                                 <div><label for="lastname" class="form-lable">Введите фамилию</label></div>
                                 <div><input type="text" id="lastname" required class="form-field"></div>
                             </div>
-                       
-                        <p>Адрес доставки</p>
-                      
+
+                            <p>Адрес доставки</p>
+
                             <div class="form-adress">
                                 <div><label for="adress" class="form-lable">Введите адрес доставки</label></div>
                                 <div><input type="text" id="adress" required class="form-field"></div>
@@ -88,24 +89,25 @@
                                 <div><label for="comment" class="form-lable">Введите комментарй к заказу</label></div>
                                 <div><textarea name="comment" id="comment" class="form-field"></textarea></div>
                             </div>
-                        
-                        <p>Способ оплаты</p>
-                        <div class="payment">
-                            <div class="filter-skin">
-                                <div class="filter-skin__item">
-                                    <input type="radio" name="skin" id="skin-dry" class="filter-skin__radio">
-                                    <label for="skin-dry" class="filter-skin__label" id="skin-dry-label"
-                                        aria-label="сухая кожа" role="radio" aria-checked="false">Банковской
-                                        картой</label>
+
+                            <p>Способ оплаты</p>
+                            <div class="payment">
+                                <div class="filter-skin">
+                                    <div class="filter-skin__item">
+                                        <input type="radio" name="skin" id="skin-dry" class="filter-skin__radio">
+                                        <label for="skin-dry" class="filter-skin__label" id="skin-dry-label"
+                                            aria-label="сухая кожа"> Банковской
+                                            картой </label>
+                                    </div>
+                                    <div class="filter-skin__item">
+                                        <input type="radio" name="skin" id="skin-oily" class="filter-skin__radio">
+                                        <label for="skin-oily" class="filter-skin__label" id="skin-oily-label"
+                                            aria-label="комбинированная кожа"> СБП
+                                        </label>
+                                    </div>
                                 </div>
-                                <div class="filter-skin__item">
-                                    <input type="radio" name="skin" id="skin-oily" class="filter-skin__radio">
-                                    <label for="skin-oily" class="filter-skin__label" id="skin-oily-label"
-                                        aria-label="комбинированная кожа" role="radio" aria-checked="false">СБП</label>
-                                </div>
+                                <button class="ordering__btn" type="submit">Оформить заказ</button>
                             </div>
-                            <button class="ordering__btn" type="submit">Оформить заказ</button>
-                        </div>
                         </form>
                     </div>
                     <div class="order">
@@ -160,7 +162,7 @@
     <footer>
         <div class="footer__grig">
             <div class="footer__block">
-                <div class="main-menu__link" href="#"><img src="img/logo-light.png" alt=""></div>
+                <div class="main-menu__link"><img src="img/logo-light.png" alt=""></div>
                 <p>Откройте для себя <br> красоту природы с нашей натуральной косметикой</p>
                 <div class="footer__text">&copy; 2023 Bloom Beauty</div>
             </div>
@@ -188,15 +190,15 @@
                 </ul>
             </div>
             <div class="footer__block">
-                <ul>
+                <div class="footer__block-email">
                     <div class="footer__title">РАССЫЛКА</div>
                     <p>Будьте в курсе событий, подпишитесь на нашу рассылку прямо сейчас!</p>
                     <div class="form-item">
                         <div><label for="email" class="form-lable">Введите эл. почту</label></div>
-                        <div><input type="email" id="email" required class="form-field"></div>
+                        <div><input type="email" required class="form-field"></div>
                     </div>
-                    <a href="#">Подписаться -></a>
-                </ul>
+                    <a href="#">Подписаться -> </a>
+                </div>
             </div>
         </div>
     </footer>
