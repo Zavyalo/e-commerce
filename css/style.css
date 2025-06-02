@@ -47,14 +47,14 @@ footer {
     margin-top: 50px;
 }
 .footer__title {
-    color: var(--color-purple);
+    color: var(--color-white);
     font-size: var(--font-sise-h3);
     margin-bottom: 12px;
     font-size: var(--font-sise-body2);
 }
 .footer__text {
     margin-top: 70px;
-    color: var(--color-purple);
+    color: var(--color-white);
 }
 .footer__block a {
     text-decoration: none;
@@ -533,7 +533,7 @@ h1 {
     background-color: var(--color-pink);
 }
 .pagination__href {
-    color: var(--color-blue-gray);
+    color: var(--color-black);
     margin: 10px;
     transition: 0.3s ease-in;
 }
@@ -570,7 +570,7 @@ h1 {
 }
 .filter__section p {
     font-size: var(--font-sise-body1);
-    color: var(--color-blue-gray);
+    color: var(--color-black);
     margin-right: 20px;
     white-space: nowrap;
 }
@@ -619,7 +619,7 @@ h1 {
     width: 30px;
     height: 30px;
     border-radius: 30px;
-    outline: var(--color-gray) 0px solid;
+    outline: var(--color-black) 0px solid;
     outline-offset: 0px;
     transition: outline 0.2s, outline-offset 0.2s;
 }
@@ -656,21 +656,21 @@ h1 {
     align-items: center;
     margin-top: 10px;
     font-size: var(--font-sise-body2);
-    color: var(--color-blue-gray);
+    color: var(--color-black);
 }
 .filter-type__item {
     display: flex;
     align-items: center;
     margin-top: 10px;
     font-size: var(--font-sise-body2);
-    color: var(--color-blue-gray);
+    color: var(--color-black);
 }
 .filter-skin__item {
     display: flex;
     align-items: center;
     margin-top: 10px;
     font-size: var(--font-sise-body2);
-    color: var(--color-blue-gray);
+    color: var(--color-black);
 }
 .filter__subtitle {
     margin-top: 15px;
@@ -778,7 +778,7 @@ input[type=range].filter-price__slider::-ms-thumb {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 20px;
-    color: var(--color-blue-gray);
+    color: var(--color-black);
     font-size: var(--font-sise-body1);
 }
 .filter__btn {
@@ -1098,7 +1098,7 @@ input[type=range].filter-price__slider::-ms-thumb {
     height: 100px;
 }
 .form-lable {
-    color: var(--color-blue-gray);
+    color: var(--color-pink);
     margin-top: 10px;
     display: block;
 }
