@@ -200,6 +200,7 @@ nav {
     .menu-burger {
         display: flex;
         flex-direction: column;
+        gap: 10px;
     }
 }
 
@@ -219,7 +220,7 @@ nav {
 .catalog__burger li {
     text-decoration: none;
     list-style-type: none;
-    margin-top: 6px;
+    margin-top: 10px;
 }
 
 .btn-close-burger-panel {
@@ -370,7 +371,7 @@ h1 {
 
 @media (max-width:768px) {
     .container {
-        max-width: 700px;
+        /* max-width: 700px; */
         margin: 0px 0px 0px 30px;
     }
 
@@ -404,8 +405,7 @@ h1 {
 
 @media (max-width:425px) {
     .container {
-        max-width: 410px;
-        margin: 0px 0px 0px 20px;
+        margin: 0px 15px 0px 15px;
     }
     .filter__section {
         margin-left: 0px;
@@ -415,18 +415,6 @@ h1 {
     }
     .footer__grig {
         display: block;
-    }
-}
-
-@media (max-width:375px) {
-    .container {
-        width: 360px;
-    }
-}
-
-@media (max-width:320px) {
-    .container {
-        width: 300px;
     }
 }
 
@@ -452,7 +440,7 @@ h1 {
 @media (max-width:425px) {
     .catalog__grid {
         grid-template-columns: repeat(1, 1fr);
-        margin: 20px 20px 0px 0px;
+        margin: 20px 0px 0px 0px;
     }
 }
 
@@ -1047,8 +1035,8 @@ input[type=range].filter-price__slider::-ms-thumb {
     }
 
     .img-small img {
-        height: 65px;
-        width: 65px;
+        height: 50px;
+        width: 50px;
     }
 
     .catalog__container-sort {
@@ -1266,6 +1254,10 @@ input[type=range].filter-price__slider::-ms-thumb {
     .catalog__offer {
         grid-template-columns: repeat(1, 1fr);
     }
+    .swiper-card {
+        width: 290px;
+        height: 290px;
+    }
 }
 
 /*---------ОФОРМЛЕНИЕ ЗАКАЗА-----------*/
@@ -1410,6 +1402,13 @@ input[type=range].filter-price__slider::-ms-thumb {
     }
 }
 
+@media (max-width:425px) {
+    .form-field {
+        width: 95%;
+    }
+}
+
+
 /*---------КОРЗИНА-----------*/
 
 .bag {
@@ -1489,8 +1488,8 @@ input[type=range].filter-price__slider::-ms-thumb {
     }
 
     .bag__order img {
-        width: 150px;
-        height: 150px;
+        width: 90px;
+        height: 90px;
     }
 }
 
