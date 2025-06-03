@@ -199,7 +199,7 @@ nav {
 
     .menu-burger {
         display: flex;
-        flex-direction: row;
+        flex-direction: column;
     }
 }
 
@@ -404,18 +404,29 @@ h1 {
 
 @media (max-width:425px) {
     .container {
-        max-width: 400px;
+        max-width: 330px;
         margin: 0px 0px 0px 10px;
     }
     .filter__section {
         margin-left: 0px;
     }
+    .catalog {
+        display: block;
+    }
+    .footer__grig {
+        display: block;
+    }
+}
+
+@media (max-width:375px) {
+    .container {
+        width: 320px;
+    }
 }
 
 @media (max-width:320px) {
     .container {
-        max-width: 300px;
-        margin: 0px 0px 0px 10px;
+        width: 298px;
     }
 }
 
@@ -1038,6 +1049,21 @@ input[type=range].filter-price__slider::-ms-thumb {
     .img-small img {
         height: 65px;
         width: 65px;
+    }
+
+    .catalog__container-sort {
+        flex-direction: column;
+        align-items: start;
+        margin-left: 0px;
+        gap: 10px;
+    }
+
+    .filter__section {
+        margin-left: 0px;
+    }
+
+    .catalog__sort {
+        margin-left: 0px;
     }
 }
 
