@@ -404,8 +404,8 @@ h1 {
 
 @media (max-width:425px) {
     .container {
-        max-width: 330px;
-        margin: 0px 0px 0px 10px;
+        max-width: 410px;
+        margin: 0px 0px 0px 20px;
     }
     .filter__section {
         margin-left: 0px;
@@ -420,13 +420,13 @@ h1 {
 
 @media (max-width:375px) {
     .container {
-        width: 320px;
+        width: 360px;
     }
 }
 
 @media (max-width:320px) {
     .container {
-        width: 298px;
+        width: 300px;
     }
 }
 
