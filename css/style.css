@@ -1341,7 +1341,7 @@ input[type=range].filter-price__slider::-ms-thumb {
 }
 
 .form-lable {
-    color: var(--color-pink);
+    color: var(--color-purple);
     margin-top: 10px;
     display: block;
 }
